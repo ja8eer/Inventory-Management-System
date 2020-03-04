@@ -21,12 +21,32 @@
 							<th>Email</th>
 							<th>Phone</th>
 							<th>Address</th>
-							<th>manager</th>
+							<th>Action</th>
 						</tr>
 					</thead>
 					
 					<tbody>
-					
+						<?php
+							include("connection.php");
+							$sno=1;
+							$sql=mysqli_query($con,"SELECT * FROM `warehouse`") or die(mysqli_error($con));
+							while($row=mysqli_fetch_array($sql)){
+								echo '<tr>
+										<td>'.$sno++.'</td>
+										<td>'.$row['warehouse_name'].'</td>
+										<td>'.$row['warehouse_email'].'</td>
+										<td>'.$row['warehouse_phone'].'</td>
+										<td>'.$row['warehouse_address'].'</td>
+										<td>
+											<a href="add_warehouse.php?warehouse_id='.$row['warehouse_id'].'&&edit" class="btn btn-info">EDIT</a>
+											<a href="" data-href="war_val.php?warehouse_id='.$row['warehouse_id'].'&&delete" data-toggle="modal" data-target="#confirm-delete" class="btn btn-danger">DELETE</a>
+										</td>
+										
+								</tr>';
+								
+							}
+							
+						?>
 					</tbody>
 				</table>
               </div>

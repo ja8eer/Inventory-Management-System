@@ -10,16 +10,36 @@
             </div>
             <!-- /.navbar-header -->
             <ul class="nav navbar-nav navbar-right">
+			
 			    <li class="dropdown">
-	        		<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown"><img src="images/1.png"><span class="badge">9</span></a>
+	        		<a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
+					
+					<?php
+												if($user_profile == "")
+												{
+													echo '<img src="images/smile.png" class="img-responsive" width="60" height="60">';
+												}
+												else
+												{
+													echo '<img src="images/profiles/'.$user_profile.'" class="img-responsive" width="60" height="60">';
+												}
+											?>
+					
+					
+					
+					
+					<span class="badge">9</span></a>
 	        		<ul class="dropdown-menu">
-						<li class="dropdown-menu-header text-center">
+ 						<li class="dropdown-menu-header text-center">
 							<strong>Account</strong>
 						</li>
-						<li class="m_2"><a href="#"><i class="fa fa-shield"></i> Lock Profile</a></li>
-						<li class="m_2"><a href="logout.php"><i class="fa fa-lock"></i> Logout</a></li>	
-	        		</ul>
-	      		</li>
+					
+									<li class="m_2"><a href="profile.php"><i class="fa fa-shield"></i> Profile</a></li>
+									<li class="m_2"><a href="logout.php"><i class="fa fa-lock"></i> Logout</a></li>
+									<li class="m_2"><a href="change_password.php"><i class="fa fa-lock"></i> Change Password</a></li> ';
+						
+				</ul>
+			</li>
 			</ul>
 			
             <div class="navbar-default sidebar" role="navigation">
@@ -28,17 +48,18 @@
                         <li>
                             <a href="home.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>Dashboard</a>
                         </li>
-                        <li>
-                            <a href="supervisor.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>Supervisors</a>
-                        </li>
-                       <li>
-                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Manager<span class="fa arrow"></span></a>
+						<?php
+											if($user_role == 'admin')
+											{
+                        
+                       echo  '<li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>Supervisor<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="add_retailer.php">Add Manager</a>
+                                    <a href="add_supervisor.php">Add Supervisor</a>
                                 </li>
                                 <li>
-                                    <a href="manage_retiler.php">Manage Manager</a>
+                                    <a href="supervisor.php">Manage Supervisor</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -97,17 +118,64 @@
 
 
 
-                          <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>Profile</a>
+                    
+                    </ul> ' ;
+											}
+					else if($user_role == 'supervisor')
+					{
+						echo  '<li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>employee<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="add_employee.php">Add employee</a>
+                                </li>
+                                <li>
+                                    <a href="manage_employee.php">Manage employee</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
                         </li>
+
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>product<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="add_products.php">Add product</a>
+                                </li>
+                                <li>
+                                    <a href="manage_products.php">Manage product</a>
+                                </li>
+                            </ul>
+
+                            <!-- /.nav-second-level -->
+                        </li>
+                        
+                          
                           <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw nav_icon"></i>Logout</a>
+                            <a href="queries.php"><i class="fa fa-dashboard fa-fw nav_icon"></i>faq</a>
+                        </li>
+                                                </li>
+                        <li>
+                            <a href="#"><i class="fa fa-laptop nav_icon"></i>queries<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="ask_query.php">Ask queries</a>
+                                </li>
+                                <li>
+                                    <a href="manage_faq.php">Manage queries</a>
+                                </li>
+                            </ul>
+
+                            <!-- /.nav-second-level -->
                         </li>
 
 
+						
 
                     
-                    </ul>
+                    </ul> ' ;
+					}
+					?>
                 </div>
                 <!-- /.sidebar-collapse -->
             </div>

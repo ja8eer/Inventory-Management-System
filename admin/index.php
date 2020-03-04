@@ -10,12 +10,12 @@
   <h2 class="form-heading">login</h2>
   <div class="app-cam">
 	  <form method="post" action="">
-		<input type="text" name="email" class="text" value="E-mail address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}">
-		<input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
+		<input type="text" name="email" class="text" value="E-mail address" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-mail address';}">
+		<input type="password" name="password" value="Password" required onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}">
 		<div class="submit" ><input type="submit" name="btn_login" onclick="myFunction()" value="Login"></div>
 		
 		<ul class="new">
-			<li class="new_left"><p><a href="#">Forgot Password ?</a></p></li>
+			<li class="new_left"><p><a href="recovery_pass.php">Forgot Password ?</a></p></li>
 			<div class="clearfix"></div>
 		</ul>
 	</form>

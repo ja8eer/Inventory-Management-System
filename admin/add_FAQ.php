@@ -18,12 +18,12 @@
                 <form name="" method="post" action="faq_val.php?add">
                   <div class="form-group">
                     <label>Question</label>
-                    <textarea rows="4" name="question" class="form-control1" placeholder="Ask Question"></textarea>
+                    <textarea rows="4" name="question" class="form-control1" placeholder="Ask Question" required ></textarea>
                   </div>
 
                   <div class="form-group">
                     <label>Answer</label>
-					<textarea rows="10" name="answer" class="form-control1" placeholder="Answer"></textarea>
+					<textarea rows="10" name="answer" class="form-control1" placeholder="Answer" required ></textarea>
                   </div>
 
                   

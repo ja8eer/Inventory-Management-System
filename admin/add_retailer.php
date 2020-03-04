@@ -13,38 +13,38 @@
        	  <div class="col_3">
             <div class="row">
               <div class="col-md-6 col-md-offset-3">
-                <h3>Add New Manager</h3>
+                <h3>Add New Supervisor</h3>
                 <hr/>
                 <form name="" method="post" action="man_val.php?add">
                   <div class="form-group">
-                    <label>Enter Manager Name</label>
-                    <input type="text" name="Manager_name" class="form-control1" placeholder="Manager_ Name">
+                    <label>Enter Supervisor Name</label>
+                    <input type="text" name="Manager_name" class="form-control1" placeholder="Supervisor_ Name">
                   </div>
 
                   <div class="form-group">
-                    <label>Enter Manager Email</label>
-                    <input type="email" name="Manager_email" class="form-control1" placeholder="Manager_ Email">
+                    <label>Enter Supervisor Email</label>
+                    <input type="email" name="Manager_email" class="form-control1" placeholder="Supervisor_ Email">
                   </div>
 
                   <div class="form-group">
-                    <label>Enter Manager Phone</label>
-                    <input type="number" name="Manager_phone" class="form-control1" placeholder="Manager_ Phone">
+                    <label>Enter Supervisor Phone</label>
+                    <input type="number" name="Manager_phone" class="form-control1" placeholder="Supervisor_ Phone">
                   </div>
 
                   <div class="form-group">
-                    <label>Enter Manager Photo</label>
-                    <input type="file" name="Manager_photo" class="form-control1" placeholder="Manager_ Photo"></textarea>
+                    <label>Enter Supervisor Photo</label>
+                    <input type="file" name="Manager_photo" class="form-control1" placeholder="Supervisor_ Photo"></textarea>
                   </div>
 
 
                   <div class="form-group">
-                    <label>Enter Manager Pan</label>
-                    <input type="text" name="manager_pan" class="form-control1" placeholder="Manager Pan">
+                    <label>Enter Supervisor Pan</label>
+                    <input type="text" name="manager_pan" class="form-control1" placeholder="Supervisor Pan">
                   </div>
 
                   <div class="form-group">
-                    <label>Enter Manager aadhar</label>
-                    <textarea rows="4" name="manager_aadhar" class="form-control1" placeholder="Manager Aadhar"></textarea>
+                    <label>Enter Supervisor aadhar</label>
+                    <textarea rows="4" name="manager_aadhar" class="form-control1" placeholder="Supervisor Aadhar"></textarea>
                   </div>
 				  
                   <div class="form-group">
@@ -53,13 +53,13 @@
                   </div>
 				  
                   <div class="form-group">
-                    <label>Enter Manager password</label>
-                    <textarea rows="4" name="manager_password" class="form-control1" placeholder="Manager Password"></textarea>
+                    <label>Enter Supervisor password</label>
+                    <textarea rows="4" name="manager_password" class="form-control1" placeholder="Supervisor Password"></textarea>
                   </div>
 
 
                   <div class="form-group">
-                    <input type="submit" name="btn_add" class="btn btn-success btn-block" value="Add New Manager_">
+                    <input type="submit" name="btn_add" class="btn btn-success btn-block" value="Add New Supervisor_">
                   </div>
 
 
